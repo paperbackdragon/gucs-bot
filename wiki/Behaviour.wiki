@@ -1,0 +1,37 @@
+#summary Brief tutorial on adding functionality to gucs-bot.
+#labels Phase-Implementation
+
+= Introduction =
+
+Adding new behaviour to gucs-bot is _easy_! The `Bot` class allows you to register callbacks to the bot, which are executed when a `PRIVMSG` which matches a given pattern is received.
+
+= Callbacks =
+
+Any callback function should accept as parameters a Bot instance, and a dictionary containing message data.
+
+{{{
+data = {"to", "from", "message"}
+}}}
+
+{{{
+def echo(bot, data):
+    bot.send("%s: %s" % (data["from"], data["message"]))
+}}}
+
+= Registering Callbacks =
+
+Use the `register` function of the Bot class to register a `callback` to a `pattern`.
+
+{{{
+def register(self, pattern, callback):
+        """
+        Registers a callback for an input pattern.
+        """
+        self.callbacks[pattern] = callback
+}}}
+
+The `pattern` should be a valid regular expression, matching the `message` content of a PRIVMSG.
+
+{{{
+gucsbot.register("(p|P)roblem\?", umad)
+}}}
