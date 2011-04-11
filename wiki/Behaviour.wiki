@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Adding new behaviour to gucs-bot is _easy_! The `callbacks` class allows you to register callbacks to the bot, which are executed when a `PRIVMSG` which match given patterns.
+Adding new behaviour to gucs-bot is _easy_! The `callbacks` class allows you to register callbacks to the bot, which are executed when a `PRIVMSG` matches a given pattern.
 
 = Callbacks =
 
