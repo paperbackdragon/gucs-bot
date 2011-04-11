@@ -12,7 +12,7 @@ To add a callback, add a tuple to the 'callback_list.' The first element of the 
 Example:
 
 {{{
-gucsbot.register("(p|P)roblem\?", umad)
+callback_list = [("(p|P)roblem\?", umad), ... ]
 }}}
 
 Where the messages "problem?" or "Problem?" sent to a channel would trigger the 'umad' callback function.
