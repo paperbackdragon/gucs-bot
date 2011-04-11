@@ -1,0 +1,10 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Tasks anyone can pick up, if they like
+
+= Details =
+
+  * Throttle the rate the bot sends to the server at
+  * Try and work out how to handle odd characters in the search      function replies
